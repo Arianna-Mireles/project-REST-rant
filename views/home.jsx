@@ -7,9 +7,9 @@ function home () {
           <main>
               <h1>HOME</h1>
               <div>
-                <img src="/images/red-wine.jpg" alt="Glass of red wine" />
+                <img src="/images/red-wine.jpg" alt="Glass of red wine" width="800" height="600" />
                 <div>
-                  Photo by <a href="https://unsplash.com/@aliissinisalu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aliis Sinisalu</a> on <a href="https://unsplash.com/">Unsplash</a>
+                Photo by <a href="https://unsplash.com/@aliissinisalu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aliis Sinisalu</a> on <a href="https://unsplash.com/photos/silver-framed-wayfarer-style-eyeglass-on-blue-book-myLVlzvxKmk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
                 </div>
               </div>
               <a href="/places">
