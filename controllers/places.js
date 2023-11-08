@@ -2,8 +2,7 @@ const router = require('express').Router()
 
 router.get('/new', (req, res) => {
     res.render('places/new')
-  })
-  
+})
 
 // GET /places
 router.get('/', (req, res) => {
@@ -20,7 +19,13 @@ router.get('/', (req, res) => {
         cuisines: 'Coffee, Bakery',
         pic: '/images/cat-cafe.jpg'
     }]     
-    res.render('places/index', {places})
+    res.render('places/index', { places })
 })
 
+// define post route
+router.post('/', (req, res) => {
+    console.log(req.body)
+    res.send('POST /places')
+  })
+  
 module.exports = router
