@@ -22,8 +22,10 @@ function Def (html) {
                     </li>
                 </ul>
             </nav>
-
-                {html.children}
+            {html.children}
+            <footer>
+                <h5>Website Created By: <a href = 'https://github.com/Arianna-Mireles'>Arianna Mireles</a></h5>
+            </footer>
             </body>
         </html>
     )
