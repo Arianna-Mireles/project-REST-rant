@@ -11,7 +11,7 @@ function index (data) {
                     </a>
                 </h2>
                 <p className="text-center">{place.cuisines}</p>
-                <img className="col-sm-6" src={place.pic} alt={place.name}/>
+                <img className="col-sm-6" src={place.pic} alt={place.name} height='360px'/>
                 <p className="text-center">Located in {place.city}, {place.state}</p>
             </div>
         )
