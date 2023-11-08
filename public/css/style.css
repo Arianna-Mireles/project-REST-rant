@@ -38,3 +38,42 @@ main {
   margin-left: 20px;
   background-color: white;
 }
+
+.container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 3fr 1fr 1fr;
+  column-gap: 5px;
+}
+
+.container h2 {
+  color: lightblue;
+}
+
+.container p {
+  font-weight: 600;
+  font-family: Garamond, Serif;
+}
+
+.showImage {
+  width: 300px;
+  height: 400px;
+  margin: 20px 0 0 0;
+}
+
+.comments {
+  margin: 0 20px 0 20px;
+  padding: 30px 0 30px 0;
+  border-top-style: solid;
+  border-top-color: lightgrey;
+  border-top-width: 2px;
+}
+
+.comments h2 {
+  color: lightblue;
+}
+
+.comments p {
+  font-weight: 600;
+  font-family: Garamond, Serif;
+}
