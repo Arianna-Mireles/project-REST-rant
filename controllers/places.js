@@ -19,10 +19,19 @@ router.post('/', (req, res) => {
       res.redirect('/places')
   })
   .catch(err => {
-      console.log('err', err)
+    if (err && err.name == 'ValidationError') {
+      let message = 'Validation Error: '
+      
+      // Todo: Find all validation errors
+  
+      res.render('places/new', { message })
+    }
+    else {
       res.render('error404')
+    }
   })
 })
+
 
 router.get('/new', (req, res) => {
   res.render('places/new')
@@ -44,8 +53,15 @@ router.put('/:id', (req, res) => {
   res.send('PUT /places/:id stub')
 })
 
-router.delete('/:id', (req, res) => {
-  res.send('DELETE /places/:id stub')
+router.delete('/:id', (request, response) => {
+  db.Place.findByIdAndDelete(request.params.id)
+  .then(deletePlace => {
+      response.status(303).redirect('/places')
+      //should be deleting all the comments associated with this place too
+  })
+  .catch(err => {
+      response.send('<h1> There was an  error when attempting to delete this entry. please try again. </h1>');
+    })
 })
 
 router.get('/:id/edit', (req, res) => {
